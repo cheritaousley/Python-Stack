@@ -1,0 +1,26 @@
+.background{
+    width:1000px;
+    margin-top:50px;
+    margin-bottom:50px;
+    margin: 0 auto;
+    /* background-color: rgba(158, 0, 255, 0.51) */
+}
+body{
+    background-color: rgba(158, 0, 255, 0.51);
+}
+.background form{
+    display: inline-block;
+    width:220px;
+}
+.location{
+    display: inline-block;
+    margin-top:20px;
+}
+.language{
+    display: inline-block;
+    margin-top: 20px;
+}
+.comment{
+    display: inline-block;
+    margin-top: 20px;
+}

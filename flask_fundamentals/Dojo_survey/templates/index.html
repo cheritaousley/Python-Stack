@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>What's my name</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <!-- linking a javascript file -->
+    <script type="text/javascript" src="{{ url_for('static', filename='js/action.js') }}"></script>
+    <!-- linking an image -->
+    <img src="{{ url_for('static', filename='img/image.png') }}">
+    </script>
+</head>
+<body>
+    <div class="background">
+        <form action='/process' method='post'>
+            <div class="name">
+            Your Name:<input type='text' name='name'>
+            </div>
+            <div class="location">
+            Dojo Location:
+            <select name="location">
+                <option value="Chicago">Select one</option>
+                <option value="Chicago">Chicago</option>
+                <option value="New York">New York</option>
+                <option value="San Jose">San Jose</option>
+                <option value="LA">LA</option>
+            </select>
+            </div>
+            <div class="language">
+            Favorite Language:
+            <select name="language">
+                <option value="Chicago">Select one</option>
+                <option value="python">Python</option>
+                <option value="Javascript">Javascript</option>
+                <option value="HTML">HTML</option>
+                <option value="CSS">CSS</option>
+            </select>
+            </div>
+            <div class="comment">
+            Comment (optional)<textarea name="comment" id="comment" cols="30" rows="10"></textarea>
+            <input type='submit' value='Submit'>
+            </div>
+        </form>
+
+    </div>
+<body>
