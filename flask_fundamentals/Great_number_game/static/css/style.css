@@ -1,0 +1,28 @@
+h1, p{
+    text-align: center;
+}
+#number{
+    margin-left: 650px;
+}
+#submit{
+    display: block;
+    margin-left: 680px;
+    margin-top: 20px;
+}
+/* /* .message{
+    background-color: red; */
+div{
+    width: 200px;
+    height: 200px;
+    display: inline-block;
+}
+.wrong{
+    background-color: red;
+    margin-left: 620px;
+    margin-top: 20px;
+}
+.right{
+    background-color: green;
+    margin-left: 620px;
+    margin-top: 20px;
+}
