@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CodingDojo Wall!</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M"
+        crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <script type="text/javascript" src="{{ url_for('static', filename='js/action.js') }}"></script>
+    <!-- linking an image -->
+    <img src="{{ url_for('static', filename='img/image.png') }}">
+    </script>
+</head>
+
+<body>
+    <div class="background">
+        <h1>Welcome to CodingDojo Wall!</h1>
+        {% with messages = get_flashed_messages() %} {% if messages %} {% for message in messages %}
+        <p>{{message}}</p>
+        {% endfor %} {% endif %} {% endwith %}
+        <div class="register">
+            <form action='/process' method='post'>
+                First Name:<input class="first_name" type='text' name='first_name'> 
+                Last Name:<input class="last_name" type='text'name='last_name'> 
+                Email: <input class="email" type='text' name='email'> 
+                Password:<input class="pw" type='password' name='password'> 
+                Confirm Password:<input class="cpw" type='password' name='confirm_password'>
+                <input class="submit" type='submit' value='Submit'>
+            </form>
+        </div>
+        <div class="login">
+            <h4> Already a user?</h4>
+            <form action='/login' method='get'>
+                <input class="login" type='submit' value='Login'>
+            </form>
+        </div>
+    </div>
+
+    <body>

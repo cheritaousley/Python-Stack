@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M"
+        crossorigin="anonymous">
+    <!-- linking an image -->
+</head>
+<body>
+    <div class="background">
+        <form action='process' method='post'>
+             {% csrf_token %}
+            <div class="name">
+                Your Name:<input type='text' name='name'>
+            </div>
+            <div class="location">
+                Dojo Location:
+                <select name="location">
+                    <option value="Chicago">Select one</option>
+                    <option value="Chicago">Chicago</option>
+                    <option value="New York">New York</option>
+                    <option value="San Jose">San Jose</option>
+                    <option value="LA">LA</option>
+                </select>
+            </div>
+            <div class="language">
+                Favorite Language:
+                <select name="language">
+                    <option value="Chicago">Select one</option>
+                    <option value="python">Python</option>
+                    <option value="Javascript">Javascript</option>
+                    <option value="HTML">HTML</option>
+                    <option value="CSS">CSS</option>
+                </select>
+            </div>
+            <div class="comment">
+                Comment (optional)<textarea name="comment" id="comment" cols="30" rows="10"></textarea>
+            </div>
+            <input type="submit" value='Submit'>
+        </form>
+
+    </div>
+</body>
+</html>

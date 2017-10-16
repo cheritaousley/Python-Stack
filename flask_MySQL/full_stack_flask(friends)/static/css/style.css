@@ -1,0 +1,23 @@
+.background{
+    margin-left: 200px;
+}
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 15px;
+    width: 50px;
+}
+.friend_name, .friend_age{
+    display: inline-block;
+    width: 200px;
+    margin-top: 20px;
+}
+form{
+    width:260px;
+}
+.submit{
+    margin-top: 20px;
+    margin-left: 100px;
+}

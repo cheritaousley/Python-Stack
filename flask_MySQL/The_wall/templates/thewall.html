@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CodingDojo Wall!</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M"
+        crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/thewall.css') }}">
+    <script type="text/javascript" src="{{ url_for('static', filename='js/action.js') }}"></script>
+    <!-- linking an image -->
+    <img src="{{ url_for('static', filename='img/image.png') }}">
+    </script>
+</head>
+
+<body>
+    <div class="background">
+        <div class="wrapper1">
+            <h2>Hi {{session['first_name']}} What's on your mind?</h2>
+        </div>
+        <div class="wrapper2">
+            <div class="messages">
+                <h3> Post a Message</h3>
+                <form class="message" action='/createmessage' method='post'>
+                    <textarea name="message" id="post_message"></textarea>
+                    <input class="submit" type='submit' value='Post a Message'>
+                </form>
+                <hr></hr>
+            </div>
+            <div class="post_messages">
+                {% for message in messages %}
+                    <p> {{ message['message'] }}</p>
+                    <div class="comments">
+                        <h3> Comment</h3>
+                        <form class="comment" action='/createcomment' method='post'>
+                            <textarea name="comment" id="post_comment"></textarea>
+                            <input class="submit" type='submit' value='Post Comment'>
+                            <input type="hidden" name="message_id" value="{{message['id']}}">
+                        </form>
+                        <hr></hr>
+                    </div>
+                {% for comment in comments %}
+                    {%if comment['messages_id'] == message['id'] %}
+                        <p> {{ comment['comment'] }}</p>
+                    {% endif %}  
+                {% endfor %}
+            {% endfor %}
+            </div>
+         </div>
+    </div>
+    
+</body>
+
+</html>

@@ -1,0 +1,21 @@
+.background{
+
+}
+.wrapper1{
+
+}
+.wrapper2{
+
+}
+#post_message{
+    width: 400px;
+}
+.message, .submit{
+    display: block;
+}
+#post_comment{
+    width: 400px;
+}
+.post_messages p{
+    border: 2px solid black;
+}

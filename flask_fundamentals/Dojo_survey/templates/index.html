@@ -15,6 +15,11 @@
 </head>
 <body>
     <div class="background">
+         {% with messages = get_flashed_messages() %} 
+         {% if messages %} 
+         {% for message in messages %}
+        <p>{{message}}</p>
+        {% endfor %} {% endif %} {% endwith %}
         <form action='/process' method='post'>
             <div class="name">
             Your Name:<input type='text' name='name'>

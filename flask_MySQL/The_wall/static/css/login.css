@@ -1,0 +1,17 @@
+.background{
+    margin-left: 400px;
+    margin-right: 400px;
+}  
+.login{
+    display: block;
+    width: 300px;
+    margin-left: 100px;
+    margin-top: 20px;
+    background-color: blue;
+}
+.login h2{
+    text-align: left;
+}
+.login input{
+    margin-top: 20px;
+}

@@ -1,0 +1,21 @@
+<table class="table">
+    <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email</th>
+        <th>Password</th>
+    </tr>
+    {% for person in registers: %}
+    <tr>
+        <td>
+            <p> {{ registers['first_name'] }}</p>
+            <p> {{ registers['last_name'] }}</p>
+            <p> {{ registers['email'] }}</p>
+            <p> {{ registers['password'] }}</p>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+{% with messages = get_flashed_messages() %} {% if messages %} {% for message in messages %}
+<p>{{message}}</p>
+{% endfor %} {% endif %} {% endwith %}

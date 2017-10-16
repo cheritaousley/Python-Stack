@@ -1,0 +1,11 @@
+.background{
+    background-color: rgba(255, 0, 204, 0.59); /* For browsers that do not support gradients */
+    background-color: -webkit-linear-gradient(#FF00D6, yellow); /* For Safari 5.1 to 6.0 */
+    background-color: -o-linear-gradient(rgba(255, 0, 225, 0.71), yellow); /* For Opera 11.1 to 12.0 */
+    background-color: -moz-linear-gradient(rgba(253, 0, 255, 0.63), yellow); /* For Firefox 3.6 to 15 */
+    background-color: linear-gradient(rgba(255, 0, 151, 0.74), yellow); 
+    background-image: url(https://zippy.gfycat.com/ArcticBlondBluefish.gif);
+    background-repeat: no-repeat;
+    background-size: 1100px 500px; 
+    height: 1000px;
+}

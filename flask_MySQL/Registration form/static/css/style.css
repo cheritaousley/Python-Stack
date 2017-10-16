@@ -1,0 +1,38 @@
+.background{
+    background-color: rgba(255, 0, 204, 0.59); /* For browsers that do not support gradients */
+    background-color: -webkit-linear-gradient(#FF00D6, yellow); /* For Safari 5.1 to 6.0 */
+    background-color: -o-linear-gradient(rgba(255, 0, 225, 0.71), yellow); /* For Opera 11.1 to 12.0 */
+    background-color: -moz-linear-gradient(rgba(253, 0, 255, 0.63), yellow); /* For Firefox 3.6 to 15 */
+    background-color: linear-gradient(rgba(255, 0, 151, 0.74), yellow); 
+}
+.background{
+    background-image: url(http://img.xcitefun.net/users/2010/06/184443,xcitefun-xcitefun-net-32.gif);
+    background-repeat: no-repeat;
+    background-size: 1100px 500px; 
+}
+.register{
+    margin-left: 100px;
+}
+.first_name,.last_name,.email,.pw,.cpw{
+    display: block;
+}
+.submit{
+    display: block;
+    margin-top: 20px;
+}
+/* form{
+    margin-left: 200px;
+    display: block;
+    width: 500px;
+    height: 400px;
+}
+input{
+    display: block;
+}
+h1{
+    text-align: center;
+}
+.first_name, .last_name, .email, .pw, .cpw{
+    width:200px;
+    height: 20px;
+} */

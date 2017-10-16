@@ -1,0 +1,18 @@
+
+<table class="table">
+    <tr>
+        <th>Emails</th>
+    </tr>
+    {% for email in email: %}
+    <tr>
+        <td>
+            <p> {{ email['email_address'] }}</p>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+{% with messages = get_flashed_messages() %} 
+{% if messages %} 
+{% for message in messages %}
+<p>{{message}}</p>
+{% endfor %} {% endif %} {% endwith %}

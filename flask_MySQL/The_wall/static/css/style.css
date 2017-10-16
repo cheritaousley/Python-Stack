@@ -1,0 +1,26 @@
+.background{
+    margin-left: 400px;
+    margin-right: 400px;
+}  
+    
+    
+.register{
+    background-color: blue;
+    border: 5px solid black;
+    margin-top: 0px;
+}
+.background h1{
+    /* border: 2px solid black; */
+}
+.first_name,.last_name,.email,.pw,.cpw{
+    display: block;
+}
+.submit{
+    display: block;
+    margin-top: 20px;
+}
+.login{
+    display: block;
+    border: 2px solid black;
+  
+}

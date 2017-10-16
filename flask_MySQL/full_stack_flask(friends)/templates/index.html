@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M"
+        crossorigin="anonymous">
+    <script type="text/javascript" src="{{ url_for('static', filename='js/action.js') }}"></script>
+    <!-- linking an image -->
+    <img src="{{ url_for('static', filename='img/image.png') }}">
+    </script>
+</head>
+    <div class="background">
+        <h1> Friends:</h1>
+        <div class="friends_table">
+            <table class="table">
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Friend Since</th>
+                </tr>
+                {% for friend in friends: %}
+                <tr>
+                <td><p> {{ friend['name'] }}</p></td>
+                <td><p>{{ friend['age'] }}</p></td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+        <form action="/create_friend" method='post'>
+            <h2> Add a Friend</h2>
+            Name: <input class="friend_name" type"text" name="name">
+            Age: <input class="friend_age" type="number" name="age">
+            <input class="submit" type="submit">
+        </form>
+    </div>
+<body>

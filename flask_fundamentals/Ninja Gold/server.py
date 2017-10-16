@@ -17,16 +17,16 @@ def index():
 def guess():
     if request.form["building"] == "farm":
       session['findGold']= random.randrange(9,21)
+      print session['findGold']
+      print "I am getting gold"
       print request.form["buikding"]
     if request.form["building"] == "cave":
       session['findGold']= random.randrange(4,11)
       print request.form["building"]
     if request.form["building"] == "house":
       session['findGold']= random.randrange(1,6)
-      print request.form["number"]
     if request.form["building"] == "casino":
       session['findGold'] = random.randrange(0, 51)
-      print request.form["number"]
     return redirect('/')
   #  return redirect('/succes')
 
